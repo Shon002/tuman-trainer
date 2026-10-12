@@ -185,6 +185,11 @@ details summary{cursor:pointer;color:var(--s1);font-size:15px}
 .tr-micmsg.err{color:var(--crit);font-weight:600}
 .tr-light{width:68px;height:68px;border-radius:50%;background:var(--axis);color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700;line-height:1;flex:none}
 .tr-modehint{grid-column:1/-1;font-size:14px;color:var(--ink2)}
+.tr-words{display:none;margin-top:12px}
+.tr-words .tr-l{display:block;margin-bottom:6px}
+.tr-lyr{display:block;width:100%;border:1.5px solid var(--axis);border-radius:10px;padding:10px 12px;font:inherit;font-size:16px;line-height:1.45;color:var(--ink);background:#fff;resize:vertical}
+.tr-lyr:focus{outline:2px solid var(--s1);outline-offset:1px;border-color:var(--s1)}
+.tr-wordhint{font-size:13.5px;color:var(--ink2);margin-top:6px}
 .tr-cv{display:block;width:100%;height:260px;border-radius:10px;background:#fff;border:1px solid var(--grid)}
 .tr-pgs{display:none;align-items:center;justify-content:center;gap:12px;font-size:13.5px;color:var(--ink2);margin-top:6px}
 .tr-pgs button{width:48px;height:44px;border-radius:9px;border:1px solid var(--axis);background:var(--surface);font-size:22px;line-height:1;cursor:pointer;color:var(--ink)}
@@ -294,7 +299,7 @@ details summary{cursor:pointer;color:var(--s1);font-size:15px}
   <h2>Скачок и спуск</h2>
   <p class="lead">Низкая «ля», верхняя «ля» — и сразу вниз на «ми». В записи вы оставались наверху: здесь это будет видно красными точками над полоской.</p>
   
-  <div class="trainer" data-ex="jump,ch12,ch3"></div>
+  <div class="trainer" data-ex="jump,ch12,ch2,ch3"></div>
 </section>
 
 <section class="slide ">
@@ -437,7 +442,7 @@ details summary{cursor:pointer;color:var(--s1);font-size:15px}
   });
 })();
 </script>
-<script>window.TR_EX={"one_do":{"title":"Одна нота — «до»","short":"«до»","bars":["Am","Am"],"notes":[[48,12,"а-а-а"],[null,4,""]]},"one_re":{"title":"Одна нота — «ре»","short":"«ре»","bars":["Dm","Dm"],"notes":[[50,12,"а-а-а"],[null,4,""]]},"one_la":{"title":"Одна нота — низкая «ля»","short":"низкая «ля»","bars":["Am","Am"],"notes":[[45,12,"а-а-а"],[null,4,""]]},"three_do":{"title":"Три слога на одной «до»","short":"«Бы-ло хо-»","bars":["Am"],"notes":[[48,2,"Бы"],[48,2,"ло"],[48,2,"хо"],[null,2,""]]},"three_re":{"title":"Три слога на одной «ре»","short":"«бы-ло так»","bars":["Dm"],"notes":[[50,2,"бы"],[50,2,"ло"],[50,2,"так"],[null,2,""]]},"step_am":{"title":"Ступенька до – си – ля","short":"до – си – ля","bars":["Am","Am"],"notes":[[48,4,""],[47,4,""],[45,4,""],[null,4,""]]},"step_dm":{"title":"Ступенька ре – до – си","short":"ре – до – си","bars":["Dm","Dm"],"notes":[[50,4,""],[48,4,""],[47,4,""],[null,4,""]]},"jump":{"title":"Скачок и спуск: ля – ля – ми","short":"ля – ля – ми","bars":["Am","Am"],"notes":[[45,4,""],[57,4,""],[52,4,""],[null,4,""]]},"ch12":{"title":"Припев, первая фраза","short":"фраза 1 (и 2)","bars":["Am","Dm","G","C"],"notes":[[null,2,""],[45,2,""],[57,2,""],[52,2,""],[53,2,""],[53,2,""],[53,1,""],[52,2,""],[50,3,""],[50,2,""],[55,1,""],[50,2,""],[52,3,""],[null,6,""]]},"ch3":{"title":"Припев, третья фраза","short":"фраза 3","bars":["Am","Dm","G"],"notes":[[null,2,""],[45,2,""],[57,2,""],[52,2,""],[53,2,""],[53,2,""],[53,1,""],[57,2,""],[55,3,""],[55,2,""],[57,2,""],[59,2,""]]},"ladder":{"title":"Лесенка к вершине","short":"лесенка до «ми»","bars":["C","Am"],"notes":[[55,2,""],[57,2,""],[59,2,""],[60,2,""],[62,2,""],[64,4,""],[null,2,""]]},"end":{"title":"Концовка припева","short":"концовка","bars":["G","C","F","Dm","E","Am"],"notes":[[null,2,""],[55,2,""],[57,2,""],[59,2,""],[60,2,""],[60,2,""],[60,1,""],[62,3,""],[60,1,""],[57,2,""],[57,1,""],[59,2,""],[60,2,""],[64,2,""],[62,2,""],[62,1,""],[60,2,""],[59,1,""],[59,3,""],[59,1,""],[60,2,""],[59,1,""],[57,5,""],[null,4,""]]},"end_low":{"title":"Концовка октавой ниже","short":"концовка октавой ниже","bars":["G","C","F","Dm","E","Am"],"notes":[[null,2,""],[55,2,""],[57,2,""],[59,2,""],[48,2,""],[48,2,""],[48,1,""],[50,3,""],[48,1,""],[45,2,""],[45,1,""],[47,2,""],[48,2,""],[52,2,""],[50,2,""],[50,1,""],[48,2,""],[47,1,""],[47,3,""],[47,1,""],[48,2,""],[47,1,""],[45,5,""],[null,4,""]]},"chorus":{"title":"Припев целиком","short":"припев","bars":["Am","Dm","G","C","Am","Dm","G","C","Am","Dm","G","C","F","Dm","E","Am"],"notes":[[null,2,""],[45,2,""],[57,2,""],[52,2,""],[53,2,""],[53,2,""],[53,1,""],[52,2,""],[50,3,""],[50,2,""],[55,1,""],[50,2,""],[52,3,""],[null,6,""],[null,2,""],[45,2,""],[57,2,""],[52,2,""],[53,2,""],[53,2,""],[53,1,""],[52,2,""],[50,3,""],[50,2,""],[55,1,""],[50,2,""],[52,3,""],[null,6,""],[null,2,""],[45,2,""],[57,2,""],[52,2,""],[53,2,""],[53,2,""],[53,1,""],[57,2,""],[55,3,""],[55,2,""],[57,2,""],[59,2,""],[60,2,""],[60,2,""],[60,1,""],[62,3,""],[60,1,""],[57,2,""],[57,1,""],[59,2,""],[60,2,""],[64,2,""],[62,2,""],[62,1,""],[60,2,""],[59,1,""],[59,3,""],[59,1,""],[60,2,""],[59,1,""],[57,5,""],[null,4,""]]},"v1":{"title":"Куплет, строка 1","short":"строка 1","bars":["Am","Am"],"notes":[[48,2,"Бы"],[48,2,"ло"],[48,1,"хо"],[47,2,"ро"],[45,3,"шо"],[null,6,""]]},"v2":{"title":"Куплет, строка 2","short":"строка 2","bars":["Dm","Dm"],"notes":[[50,2,"бы"],[50,2,"ло"],[50,1,"так"],[48,2,"лег"],[47,3,"ко"],[null,6,""]]},"v3":{"title":"Куплет, строка 3","short":"строка 3","bars":["E","E","Am","Am"],"notes":[[50,2,"Но"],[50,2,"на"],[50,1,"ше"],[48,2,"ю"],[47,3,"бро"],[47,2,"си"],[48,1,"ли"],[47,2,"ар"],[48,3,"кан"],[null,14,""]]},"v4":{"title":"Куплет, строка 4","short":"строка 4","bars":["Am","Am"],"notes":[[48,2,"Сол"],[48,2,"неч"],[48,1,"ный"],[47,2,"о"],[45,3,"гонь"],[null,6,""]]},"v5":{"title":"Куплет, строка 5","short":"строка 5","bars":["Dm","Dm"],"notes":[[50,2,"ат"],[50,2,"мос"],[50,1,"фе"],[48,2,"ры"],[47,3,"бронь"],[null,6,""]]},"v6":{"title":"Куплет, строка 6","short":"строка 6","bars":["E","E","Am","Am"],"notes":[[50,1,"Про"],[50,2,"би"],[50,3,"вал"],[48,1,"но"],[47,3,"не"],[47,2,"про"],[48,2,"бил"],[47,1,"ту"],[45,3,"ман"],[null,6,""],[null,8,""]]},"verse":{"title":"Куплет целиком","short":"куплет","bars":["Am","Am","Dm","Dm","E","E","Am","Am","Am","Am","Dm","Dm","E","E","Am","Am"],"notes":[[48,2,"Бы"],[48,2,"ло"],[48,1,"хо"],[47,2,"ро"],[45,3,"шо"],[null,6,""],[50,2,"бы"],[50,2,"ло"],[50,1,"так"],[48,2,"лег"],[47,3,"ко"],[null,6,""],[50,2,"Но"],[50,2,"на"],[50,1,"ше"],[48,2,"ю"],[47,3,"бро"],[47,2,"си"],[48,1,"ли"],[47,2,"ар"],[48,3,"кан"],[null,14,""],[48,2,"Сол"],[48,2,"неч"],[48,1,"ный"],[47,2,"о"],[45,3,"гонь"],[null,6,""],[50,2,"ат"],[50,2,"мос"],[50,1,"фе"],[48,2,"ры"],[47,3,"бронь"],[null,6,""],[50,1,"Про"],[50,2,"би"],[50,3,"вал"],[48,1,"но"],[47,3,"не"],[47,2,"про"],[48,2,"бил"],[47,1,"ту"],[45,3,"ман"],[null,6,""],[null,8,""]]}};window.TR_ORDER=["one_do", "one_re", "one_la", "three_do", "three_re", "step_am", "step_dm", "v1", "v2", "v3", "v4", "v5", "v6", "verse", "jump", "ch12", "ch3", "ladder", "end", "end_low", "chorus"];</script>
+<script>window.TR_EX={"one_do":{"title":"Одна нота — «до»","short":"«до»","bars":["Am","Am"],"notes":[[48,12,"а-а-а"],[null,4,""]]},"one_re":{"title":"Одна нота — «ре»","short":"«ре»","bars":["Dm","Dm"],"notes":[[50,12,"а-а-а"],[null,4,""]]},"one_la":{"title":"Одна нота — низкая «ля»","short":"низкая «ля»","bars":["Am","Am"],"notes":[[45,12,"а-а-а"],[null,4,""]]},"three_do":{"title":"Три слога на одной «до»","short":"«Бы-ло хо-»","bars":["Am"],"notes":[[48,2,"Бы"],[48,2,"ло"],[48,2,"хо"],[null,2,""]]},"three_re":{"title":"Три слога на одной «ре»","short":"«бы-ло так»","bars":["Dm"],"notes":[[50,2,"бы"],[50,2,"ло"],[50,2,"так"],[null,2,""]]},"step_am":{"title":"Ступенька до – си – ля","short":"до – си – ля","bars":["Am","Am"],"notes":[[48,4,""],[47,4,""],[45,4,""],[null,4,""]]},"step_dm":{"title":"Ступенька ре – до – си","short":"ре – до – си","bars":["Dm","Dm"],"notes":[[50,4,""],[48,4,""],[47,4,""],[null,4,""]]},"jump":{"title":"Скачок и спуск: ля – ля – ми","short":"ля – ля – ми","bars":["Am","Am"],"notes":[[45,4,""],[57,4,""],[52,4,""],[null,4,""]],"txt":["chorus",0]},"ch12":{"title":"Припев, первая фраза","short":"фраза 1","bars":["Am","Dm","G","C"],"notes":[[null,2,""],[45,2,""],[57,2,""],[52,2,""],[53,2,""],[53,2,""],[53,1,""],[52,2,""],[50,3,""],[50,2,""],[55,1,""],[50,2,""],[52,3,""],[null,6,""]],"txt":["chorus",0]},"ch2":{"title":"Припев, вторая фраза","short":"фраза 2","bars":["Am","Dm","G","C"],"notes":[[null,2,""],[45,2,""],[57,2,""],[52,2,""],[53,2,""],[53,2,""],[53,1,""],[52,2,""],[50,3,""],[50,2,""],[55,1,""],[50,2,""],[52,3,""],[null,6,""]],"txt":["chorus",12]},"ch3":{"title":"Припев, третья фраза","short":"фраза 3","bars":["Am","Dm","G"],"notes":[[null,2,""],[45,2,""],[57,2,""],[52,2,""],[53,2,""],[53,2,""],[53,1,""],[57,2,""],[55,3,""],[55,2,""],[57,2,""],[59,2,""]],"txt":["chorus",24]},"ladder":{"title":"Лесенка к вершине","short":"лесенка до «ми»","bars":["C","Am"],"notes":[[55,2,""],[57,2,""],[59,2,""],[60,2,""],[62,2,""],[64,4,""],[null,2,""]]},"end":{"title":"Концовка припева","short":"концовка","bars":["G","C","F","Dm","E","Am"],"notes":[[null,2,""],[55,2,""],[57,2,""],[59,2,""],[60,2,""],[60,2,""],[60,1,""],[62,3,""],[60,1,""],[57,2,""],[57,1,""],[59,2,""],[60,2,""],[64,2,""],[62,2,""],[62,1,""],[60,2,""],[59,1,""],[59,3,""],[59,1,""],[60,2,""],[59,1,""],[57,5,""],[null,4,""]],"txt":["chorus",32]},"end_low":{"title":"Концовка октавой ниже","short":"концовка октавой ниже","bars":["G","C","F","Dm","E","Am"],"notes":[[null,2,""],[55,2,""],[57,2,""],[59,2,""],[48,2,""],[48,2,""],[48,1,""],[50,3,""],[48,1,""],[45,2,""],[45,1,""],[47,2,""],[48,2,""],[52,2,""],[50,2,""],[50,1,""],[48,2,""],[47,1,""],[47,3,""],[47,1,""],[48,2,""],[47,1,""],[45,5,""],[null,4,""]],"txt":["chorus",32]},"chorus":{"title":"Припев целиком","short":"припев","bars":["Am","Dm","G","C","Am","Dm","G","C","Am","Dm","G","C","F","Dm","E","Am"],"notes":[[null,2,""],[45,2,""],[57,2,""],[52,2,""],[53,2,""],[53,2,""],[53,1,""],[52,2,""],[50,3,""],[50,2,""],[55,1,""],[50,2,""],[52,3,""],[null,6,""],[null,2,""],[45,2,""],[57,2,""],[52,2,""],[53,2,""],[53,2,""],[53,1,""],[52,2,""],[50,3,""],[50,2,""],[55,1,""],[50,2,""],[52,3,""],[null,6,""],[null,2,""],[45,2,""],[57,2,""],[52,2,""],[53,2,""],[53,2,""],[53,1,""],[57,2,""],[55,3,""],[55,2,""],[57,2,""],[59,2,""],[60,2,""],[60,2,""],[60,1,""],[62,3,""],[60,1,""],[57,2,""],[57,1,""],[59,2,""],[60,2,""],[64,2,""],[62,2,""],[62,1,""],[60,2,""],[59,1,""],[59,3,""],[59,1,""],[60,2,""],[59,1,""],[57,5,""],[null,4,""]],"txt":["chorus",0]},"v1":{"title":"Куплет, строка 1","short":"строка 1","bars":["Am","Am"],"notes":[[48,2,"Бы"],[48,2,"ло"],[48,1,"хо"],[47,2,"ро"],[45,3,"шо"],[null,6,""]]},"v2":{"title":"Куплет, строка 2","short":"строка 2","bars":["Dm","Dm"],"notes":[[50,2,"бы"],[50,2,"ло"],[50,1,"так"],[48,2,"лег"],[47,3,"ко"],[null,6,""]]},"v3":{"title":"Куплет, строка 3","short":"строка 3","bars":["E","E","Am","Am"],"notes":[[50,2,"Но"],[50,2,"на"],[50,1,"ше"],[48,2,"ю"],[47,3,"бро"],[47,2,"си"],[48,1,"ли"],[47,2,"ар"],[48,3,"кан"],[null,14,""]]},"v4":{"title":"Куплет, строка 4","short":"строка 4","bars":["Am","Am"],"notes":[[48,2,"Сол"],[48,2,"неч"],[48,1,"ный"],[47,2,"о"],[45,3,"гонь"],[null,6,""]]},"v5":{"title":"Куплет, строка 5","short":"строка 5","bars":["Dm","Dm"],"notes":[[50,2,"ат"],[50,2,"мос"],[50,1,"фе"],[48,2,"ры"],[47,3,"бронь"],[null,6,""]]},"v6":{"title":"Куплет, строка 6","short":"строка 6","bars":["E","E","Am","Am"],"notes":[[50,1,"Про"],[50,2,"би"],[50,3,"вал"],[48,1,"но"],[47,3,"не"],[47,2,"про"],[48,2,"бил"],[47,1,"ту"],[45,3,"ман"],[null,6,""],[null,8,""]]},"verse":{"title":"Куплет целиком","short":"куплет","bars":["Am","Am","Dm","Dm","E","E","Am","Am","Am","Am","Dm","Dm","E","E","Am","Am"],"notes":[[48,2,"Бы"],[48,2,"ло"],[48,1,"хо"],[47,2,"ро"],[45,3,"шо"],[null,6,""],[50,2,"бы"],[50,2,"ло"],[50,1,"так"],[48,2,"лег"],[47,3,"ко"],[null,6,""],[50,2,"Но"],[50,2,"на"],[50,1,"ше"],[48,2,"ю"],[47,3,"бро"],[47,2,"си"],[48,1,"ли"],[47,2,"ар"],[48,3,"кан"],[null,14,""],[48,2,"Сол"],[48,2,"неч"],[48,1,"ный"],[47,2,"о"],[45,3,"гонь"],[null,6,""],[50,2,"ат"],[50,2,"мос"],[50,1,"фе"],[48,2,"ры"],[47,3,"бронь"],[null,6,""],[50,1,"Про"],[50,2,"би"],[50,3,"вал"],[48,1,"но"],[47,3,"не"],[47,2,"про"],[48,2,"бил"],[47,1,"ту"],[45,3,"ман"],[null,6,""],[null,8,""]]}};window.TR_ORDER=["one_do", "one_re", "one_la", "three_do", "three_re", "step_am", "step_dm", "v1", "v2", "v3", "v4", "v5", "v6", "verse", "jump", "ch12", "ch2", "ch3", "ladder", "end", "end_low", "chorus"];window.TR_TEXTS={"chorus":{"need":54,"hint":"Слова припева — четыре строки, начиная с «И мёртвый месяц…»"}};</script>
 <script>
 /* Тренажёр голоса: образец (метроном, нота, аккорд) + микрофон и оценка высоты в реальном времени.
    Данные упражнений приходят из window.TR_EX / window.TR_ORDER (их пишет tuman_trenazher.py). */
@@ -469,6 +474,37 @@ function hz(m){return 440*Math.pow(2,(m-69)/12)}
 function chordName(c){return ROOT[mod12(CHROOT[c]+st.key)]+(c.charAt(c.length-1)==='m'?'m':'')}
 function all(sel,root){return[].slice.call((root||document).querySelectorAll(sel))}
 function catOf(dev){var ad=Math.abs(dev);return ad<=.5?'hit':ad<=1.5?'near':'miss'}
+
+/*SYL-BEGIN*/
+// Русский текст -> слоги по одному на ноту. В слоге одна гласная; из двух и более согласных подряд первая остаётся слева.
+// Дефисы внутри слова — ручная разбивка; «_» — слог тянется ещё на одну ноту; слово без гласной («в», «к») липнет к следующему.
+var VOW='аеёиоуыэюяАЕЁИОУЫЭЮЯ';
+function splitWord(w){
+  var idx=[],i;for(i=0;i<w.length;i++)if(VOW.indexOf(w.charAt(i))>=0)idx.push(i);
+  if(!idx.length)return[];
+  var res=[],from=0;
+  for(var k=0;k<idx.length-1;k++){
+    var a=idx[k],b=idx[k+1],cut=b-a-1<=1?a+1:a+2;
+    while(cut<b&&'йьъЙЬЪ'.indexOf(w.charAt(cut))>=0)cut++;
+    res.push(w.slice(from,cut));from=cut;
+  }
+  res.push(w.slice(from));return res;
+}
+function syllables(text){
+  var out=[],pre='';
+  String(text||'').replace(/[«»"“”„(),.!?;:…\/|]/g,' ').split(/\s+/).forEach(function(w){
+    if(!w||/^[—–-]+$/.test(w))return;
+    if(w==='_'){out.push('~');return}
+    var parts=w.indexOf('-')>0&&w.charAt(w.length-1)!=='-'?w.split('-').filter(Boolean):splitWord(w);
+    if(!parts.length){pre+=w+' ';return}
+    parts[0]=pre+parts[0];pre='';out=out.concat(parts);
+  });
+  if(pre&&out.length)out[out.length-1]+=' '+pre.replace(/\s+$/,'');
+  return out;
+}
+/*SYL-END*/
+var words={};                                   // имя текста -> слоги
+function loadWords(name){var t='';try{t=localStorage.getItem(KEY+'text-'+name)||''}catch(e){}words[name]=syllables(t);return t}
 
 /*DETECT-BEGIN*/
 // Высота голоса по одному кадру микрофона (алгоритм YIN): ищем сдвиг, при котором сигнал лучше всего совпадает сам с собой.
@@ -576,7 +612,8 @@ function latency(){
 // ---------------------------------------------------------------- упражнение и запуск
 function buildSeq(ex){
   var notes=[],pos=0;
-  ex.notes.forEach(function(n){if(n[0]!==null)notes.push({i:notes.length,pos:pos,len:n[1],m:n[0]+st.key,label:n[2]||nn(n[0]+st.key)});pos+=n[1]});
+  var w=ex.txt?words[ex.txt[0]]||[]:[],off=ex.txt?ex.txt[1]:0;
+  ex.notes.forEach(function(n){if(n[0]!==null){var i=notes.length;notes.push({i:i,pos:pos,len:n[1],m:n[0]+st.key,label:n[2]||w[off+i]||nn(n[0]+st.key)})}pos+=n[1]});
   return{notes:notes,total:pos,bars:ex.bars};
 }
 function scored(r,c){return c>=0&&!(r.listen&&c===0)}
@@ -754,6 +791,7 @@ function blockHTML(vars){
     '<div class="tr-micmsg"></div><canvas class="tr-cv"></canvas>'+
     '<div class="tr-pgs"><button type="button" data-pg="-1" aria-label="предыдущие такты">&#8249;</button><span></span><button type="button" data-pg="1" aria-label="следующие такты">&#8250;</button></div>'+
     '<div class="tr-res"></div>'+
+    '<div class="tr-words"><label class="tr-l">Слова под нотами</label><textarea class="tr-lyr" rows="4" spellcheck="false"></textarea><div class="tr-wordhint"></div></div>'+
     '<div class="tr-set">'+
       '<div class="tr-grp"><span class="tr-l">Темп</span><button type="button" data-bpm="-5" aria-label="медленнее">&minus;</button><b class="tr-bpm"></b><button type="button" data-bpm="5" aria-label="быстрее">+</button></div>'+
       '<div class="tr-grp"><span class="tr-l">Тональность</span><button type="button" data-key="-1" aria-label="ниже">&minus;</button><b class="tr-keyv"></b><button type="button" data-key="1" aria-label="выше">+</button></div>'+
@@ -779,7 +817,16 @@ function Trainer(el){
 }
 Trainer.prototype.setPlaying=function(on){var b=this.el.querySelector('.tr-go');b.innerHTML=on?'&#9632; Стоп':'&#9654; Старт';b.classList.toggle('on',on)};
 Trainer.prototype.redraw=function(){
-  var sq=this.last?this.last.sq:buildSeq(EX[this.exId]),rg=range(sq),small=this.cv.clientWidth<560;
+  var ex=EX[this.exId],wb=this.el.querySelector('.tr-words');
+  wb.style.display=ex.txt?'block':'none';
+  if(ex.txt){
+    var ta=wb.querySelector('textarea'),nm=ex.txt[0],need=TEXTS[nm].need,have=(words[nm]||[]).length;
+    ta.setAttribute('data-text',nm);ta.placeholder=TEXTS[nm].hint;
+    if(document.activeElement!==ta)ta.value=rawText[nm]||'';
+    wb.querySelector('.tr-wordhint').textContent=(have?'Слогов '+have+' из '+need+' нужных. ':'')+
+      'Впишите слова один раз — тренажёр сам разобьёт их на слоги и подпишет под нотами. Хранятся только на этом устройстве. Если слог тянется на две ноты, поставьте после него через пробел знак _.';
+  }
+  var sq=this.last?this.last.sq:buildSeq(ex),rg=range(sq),small=this.cv.clientWidth<560;
   this.cv.style.height=Math.max(small?236:266,Math.min(small?366:456,(rg[1]-rg[0]+1)*(small?11:13)+86))+'px';
   var per=perPage(this.cv,sq),pages=Math.ceil(sq.total/8/per),pg=this.el.querySelector('.tr-pgs');
   this.page=Math.max(0,Math.min(pages-1,this.page||0));
@@ -824,6 +871,14 @@ document.addEventListener('click',function(ev){
     var was=run?run.tr:null;if(run)stop();trainers.forEach(function(t){t.last=null;t.showResults(null);t.redraw()});refresh();if(was)start(was)}
   else if(b.classList.contains('tr-micbtn')){if(mic.on){micStop();refresh()}else micStart()}
   else if(b.id==='tr-reset'){ORDER.forEach(function(id){try{localStorage.removeItem(KEY+'best-'+id)}catch(e){}});bestTable()}
+});
+var TEXTS=window.TR_TEXTS||{},rawText={};
+Object.keys(TEXTS).forEach(function(nm){rawText[nm]=loadWords(nm)});
+document.addEventListener('input',function(ev){
+  var e=ev.target;if(!e.classList||!e.classList.contains('tr-lyr'))return;
+  var nm=e.getAttribute('data-text');rawText[nm]=e.value;words[nm]=syllables(e.value);
+  try{localStorage.setItem(KEY+'text-'+nm,e.value)}catch(x){}
+  trainers.forEach(function(t){if(!run||run.tr!==t){t.last=null;t.redraw()}});
 });
 document.addEventListener('change',function(ev){
   var e=ev.target;if(!e.hasAttribute||!e.hasAttribute('data-s'))return;
