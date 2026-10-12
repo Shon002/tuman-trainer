@@ -183,21 +183,8 @@ details summary{cursor:pointer;color:var(--s1);font-size:15px}
 .tr-micmsg{font-size:14px;color:var(--ink2);margin:-4px 0 10px}
 .tr-micmsg:empty{display:none}
 .tr-micmsg.err{color:var(--crit);font-weight:600}
-.tr-meter{display:grid;grid-template-columns:auto 1fr;grid-template-areas:"light txt" "scale scale";gap:10px 14px;align-items:center;border-radius:14px;padding:12px 14px;background:var(--wash);margin-bottom:10px;transition:background .12s}
-.tr-light{grid-area:light;width:68px;height:68px;border-radius:50%;background:var(--axis);color:#fff;display:flex;align-items:center;justify-content:center;font-size:36px;font-weight:700;line-height:1;transition:background .12s;flex:none}
-.tr-mtxt{grid-area:txt;min-width:0}
-.tr-big{font-size:22px;font-weight:650;line-height:1.2}
-.tr-msg{font-size:15.5px;color:var(--ink2);margin-top:3px;min-height:1.4em}
-.tr-scale{grid-area:scale;display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted)}
-.tr-scale em{font-style:normal;flex:none}
-.tr-track{position:relative;flex:1;height:18px;border-radius:9px;background:#e3e2dc}
-.tr-track .z2{position:absolute;left:31.25%;width:37.5%;top:0;bottom:0;background:#f1dc9c}
-.tr-track .z1{position:absolute;left:43.75%;width:12.5%;top:0;bottom:0;background:#8fd48f}
-.tr-track i{position:absolute;top:50%;width:26px;height:26px;margin:-13px 0 0 -13px;border-radius:50%;background:var(--ink);border:3px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.35);display:none;transition:left .06s linear}
-.tr-meter.hit{background:#dcf2dc}.tr-meter.hit .tr-light{background:var(--good)}
-.tr-meter.near{background:#fbefc9}.tr-meter.near .tr-light{background:var(--warn);color:var(--ink)}
-.tr-meter.miss{background:#f8dada}.tr-meter.miss .tr-light{background:var(--crit)}
-.tr-meter.count .tr-light{background:var(--ink)}.tr-meter.listen .tr-light{background:var(--s1)}
+.tr-light{width:68px;height:68px;border-radius:50%;background:var(--axis);color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700;line-height:1;flex:none}
+.tr-modehint{grid-column:1/-1;font-size:14px;color:var(--ink2)}
 .tr-cv{display:block;width:100%;height:260px;border-radius:10px;background:#fff;border:1px solid var(--grid)}
 .tr-pgs{display:none;align-items:center;justify-content:center;gap:12px;font-size:13.5px;color:var(--ink2);margin-top:6px}
 .tr-pgs button{width:48px;height:44px;border-radius:9px;border:1px solid var(--axis);background:var(--surface);font-size:22px;line-height:1;cursor:pointer;color:var(--ink)}
@@ -213,7 +200,7 @@ details summary{cursor:pointer;color:var(--s1);font-size:15px}
 .tr-grp b{min-width:44px;text-align:center;font-size:20px;font-variant-numeric:tabular-nums}
 .tr-keyhint{font-size:14px;color:var(--ink2)}
 .tr-sws{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.tr-sws .tr-l{width:64px}
+.tr-sws .tr-l{width:auto;margin-right:4px}
 .tr-sw{position:relative;cursor:pointer;display:inline-flex}
 .tr-sw input{position:absolute;opacity:0;width:1px;height:1px}
 .tr-sw span{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--axis);border-radius:999px;padding:8px 14px 8px 12px;font-size:15px;min-height:44px;color:var(--ink2);background:var(--surface)}
@@ -224,7 +211,7 @@ details summary{cursor:pointer;color:var(--s1);font-size:15px}
 .tuner{border-radius:16px;padding:14px 16px;background:var(--surface);color:var(--ink);margin-top:18px}
 .tuner canvas{display:block;width:100%;height:220px;border-radius:10px;background:#fff;border:1px solid var(--grid);margin-top:10px}
 .tu-read{display:flex;align-items:center;gap:14px}
-.tuner .tr-light{width:auto;min-width:68px;padding:0 18px;border-radius:34px;font-size:26px}
+.tuner .tr-light{width:190px;border-radius:34px}
 .tuner .tr-light.hit{background:var(--s1)}
 .tu-cents{font-size:16px;color:var(--ink2)}
 .tr-bar span{display:block;height:10px;border-radius:5px;background:var(--wash);min-width:90px;overflow:hidden}.tr-bar i{display:block;height:100%;background:var(--good)}
@@ -236,7 +223,7 @@ details summary{cursor:pointer;color:var(--s1);font-size:15px}
 @media (max-width:760px){
   .trainer{padding:12px 12px 14px;margin:14px -8px;border-radius:14px}
   .tr-main .tr-go{flex:1 1 150px}.tr-main .tr-micbtn{flex:1 1 150px}.tr-lvl{flex:1 1 100%;width:auto}
-  .tr-light{width:58px;height:58px;font-size:30px}.tr-big{font-size:19px}.tr-msg{font-size:14.5px}
+  .tuner .tr-light{width:150px;height:58px;font-size:22px}
   .tr-set{grid-template-columns:1fr;gap:10px}.tr-grp{justify-content:flex-end}.tr-grp .tr-l{margin-right:auto}.tr-sws .tr-l{width:100%}
   .tr-grp button{width:46px;height:46px}.tr-score b{font-size:38px}
   .tuner{margin-left:-8px;margin-right:-8px}
@@ -251,10 +238,10 @@ details summary{cursor:pointer;color:var(--s1);font-size:15px}
   <h1>Пойте — экран покажет, попали ли</h1>
   <p class="lead">Те же упражнения, что в уроке, но теперь с проверкой. Страница слушает микрофон, определяет ноту вашего голоса и сравнивает с нужной. Метроном, нота-подсказка и аккорд включаются по отдельности, темп и тональность меняются.</p>
   <div class="steps">
-    <div class="st"><b>Наденьте наушники</b>Без них микрофон слышит и подсказку из динамика. Работать будет, но точнее — в наушниках.</div>
+    <div class="st"><b>Без наушников</b>Вы должны слышать собственный голос — так ухо и голос учатся работать вместе. Положите телефон перед собой, звук — на средней громкости.</div>
     <div class="st"><b>Включите микрофон</b>Браузер спросит разрешение. Звук не записывается и никуда не уходит: всё считается на вашем устройстве.</div>
-    <div class="st"><b>Нажмите «Старт»</b>Четыре щелчка отсчёта, образец, потом ваша очередь. Кружок со стрелкой показывает, выше вы или ниже.</div>
-    <div class="st"><b>Смотрите результат</b>После круга — оценка по каждой ноте. Лучшие результаты собираются на последнем слайде.</div>
+    <div class="st"><b>Нажмите «Старт»</b>Отсчёт, образец, снова отсчёт — и ваша очередь. Дальше по кругу, с тактом передышки, пока не нажмёте «Стоп».</div>
+    <div class="st"><b>Смотрите на ленту</b>Ваш голос рисуется точками поверх нужных нот. После каждого круга — оценка по каждой ноте.</div>
   </div>
   <h3>Проверка микрофона</h3>
   <p class="small">Потяните любой звук — увидите, какую ноту поёте. Если точки появляются, микрофон работает.</p>
@@ -265,15 +252,13 @@ details summary{cursor:pointer;color:var(--s1);font-size:15px}
 <section class="slide ">
   <p class="kicker">Упражнение 1 · держать ноту</p>
   <h2>Одна нота</h2>
-  <p class="lead">Тяните «а-а-а» почти два такта. Задача — чтобы кружок был зелёным от начала до конца, а шарик не ползал по шкале.</p>
+  <p class="lead">Тяните «а-а-а» почти два такта. Задача — чтобы точки шли зелёные и ровной линией по полоске, без сползания.</p>
   <h3>Как читать экран</h3>
 <div class="key">
   <svg viewBox="0 0 34 22"><rect x="0" y="3" width="34" height="16" fill="rgba(12,163,12,.2)"/><rect x="1" y="7" width="32" height="8" rx="3" fill="#0b0b0b" opacity=".82"/></svg>
   <div><b>Чёрная полоска</b> — нужная нота, зелёная зона вокруг неё — «в ноту» (полполутона вверх и вниз).</div>
   <svg viewBox="0 0 34 22"><circle cx="6" cy="11" r="4" fill="#0ca30c"/><circle cx="17" cy="11" r="4" fill="#eda100"/><circle cx="28" cy="11" r="4" fill="#d03b3b"/></svg>
-  <div><b>Точки</b> — ваш голос: зелёные в ноту, жёлтые рядом, красные мимо. Выше на экране — выше звук.</div>
-  <svg viewBox="0 0 34 22"><circle cx="17" cy="11" r="10" fill="#d03b3b"/><path d="M17 5v11M12.5 11.5 17 16l4.5-4.5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  <div><b>Кружок со стрелкой</b> говорит, что делать: ↑ поднимайтесь, ↓ опускайтесь, ✓ держите. Под ним шкала: шарик должен стоять в зелёной середине.</div>
+  <div><b>Точки</b> — ваш голос: зелёные в ноту, жёлтые рядом, красные мимо. Точки выше полоски — вы выше ноты, ниже — ниже.</div>
   <svg viewBox="0 0 34 22"><rect x="1" y="6" width="14" height="10" rx="3" fill="#0ca30c"/><rect x="19" y="6" width="14" height="10" rx="3" fill="#d03b3b"/></svg>
   <div><b>Спетая нота красится</b> сразу: зелёная — получилась, жёлтая — рядом, красная — мимо, серая — голоса не было.</div>
 </div>
@@ -292,14 +277,14 @@ details summary{cursor:pointer;color:var(--s1);font-size:15px}
   <p class="kicker">Упражнение 3 · куплет</p>
   <h2>Куплет по строкам</h2>
   <p class="lead">По одной строке. Первые три слога стоят на одной ноте — следите, чтобы первая точка сразу попала в зелёную зону, а не сверху.</p>
-  <div class="note do"><p><b>Совет.</b> Оставьте «сначала послушать» включённым и выключите «ноту»: образец прозвучит один раз, а петь вы будете уже без подсказки — только под аккорд и метроном.</p></div>
+  <div class="note do"><p><b>Как идёт упражнение.</b> Образец звучит один раз. Потом такт отсчёта — и поёте вы, под метроном. Снова такт отсчёта, и ещё раз. Остановиться — кнопкой «Стоп».</p></div>
   <div class="trainer" data-ex="v1,v2,v3,v4,v5,v6"></div>
 </section>
 
 <section class="slide ">
   <p class="kicker">Куплет целиком</p>
   <h2>Все шесть строк подряд</h2>
-  <p class="lead">Шестнадцать тактов. Лента листается сама по мере пения; после круга её можно пролистать стрелками и посмотреть, где вышло, а где нет.</p>
+  <p class="lead">Шестнадцать тактов. Лента листается сама по мере пения; после остановки её можно пролистать стрелками и посмотреть, где вышло, а где нет.</p>
   
   <div class="trainer" data-ex="verse"></div>
 </section>
@@ -337,12 +322,13 @@ details summary{cursor:pointer;color:var(--s1);font-size:15px}
   <div class="grid2" style="margin-top:8px">
     <div class="card"><h3>Как заниматься</h3>
       <p>Темп 60–80, пока не станет зелёным. Быстрее — только после этого.</p>
-      <p>Сначала с нотой-подсказкой, потом без неё, потом без аккорда. Последняя ступень — только метроном.</p>
+      <p>Слушаете образец, потом поёте сами и слышите свой голос. Не получается найти ноту — включите «ноту» при пении на пару кругов и снова выключите.</p>
       <p>Если куплет низко, а вершина припева высоко — подвигайте тональность: «+3» — это оригинал, на гитаре те же аккорды с каподастром на третьем ладу.</p></div>
     <div class="card"><h3>Что тренажёр умеет и чего нет</h3>
       <p>Оценивает середину каждой ноты: начало и самый конец не считаются, там голос ещё входит в ноту.</p>
       <p>«В ноту» — отклонение до половины полутона, «рядом» — до полутора.</p>
-      <p>На быстром темпе короткие ноты оцениваются грубее. Без наушников подсказка из динамика может попасть в микрофон и засчитаться за голос.</p></div>
+      <p>На быстром темпе короткие ноты оцениваются грубее.</p>
+      <p>Пока вы поёте, по умолчанию звучит только метроном: нота и аккорд из динамика попадают в микрофон. Их можно включить, но тогда микрофон слышит хуже — пойте ближе.</p></div>
   </div>
 </section>
 <div class="nav" id="nav">
@@ -464,12 +450,17 @@ var MINOR=['ля','си-бемоль','си','до','до-диез','ре','ми
 var CH={Am:[45,52,57,60,64],Dm:[50,57,62,65],E:[40,47,52,56,59,64],G:[43,47,50,55,59,67],C:[48,52,55,60,64],F:[41,48,53,57,60,65]};
 var CHROOT={Am:9,Dm:2,E:4,G:7,C:0,F:5};
 var KEY='tuman-tr-';
-var LAT=0.09;           // голос на экране сдвигается на 0,09 с назад: задержка звука, слуха и окна анализа
+var GAP=8;              // между кругами — такт отсчёта (8 восьмых): перевести дыхание и войти вовремя
 var COL={ink:'#0b0b0b',ink2:'#52514e',muted:'#898781',grid:'#e1e0d9',soft:'#f0efec',axis:'#c3c2b7',s1:'#2a78d6',good:'#0ca30c',warn:'#eda100',crit:'#d03b3b'};
 var CAT={hit:COL.good,near:COL.warn,miss:COL.crit,none:COL.muted,free:COL.muted};
-var st={bpm:80,metro:true,note:true,chord:true,listen:true,loop:false,phones:false,key:0};
-try{var sv=JSON.parse(localStorage.getItem(KEY+'set')||'{}');for(var k0 in st)if(typeof sv[k0]===typeof st[k0])st[k0]=sv[k0]}catch(e){}
-function save(){try{localStorage.setItem(KEY+'set',JSON.stringify(st))}catch(e){}}
+// note и chord — то, что звучит, ПОКА ВЫ ПОЁТЕ; в образце нота и аккорд звучат всегда
+var st={bpm:80,metro:true,note:false,chord:false,listen:true,loop:true,key:0};
+try{
+  var sv=JSON.parse(localStorage.getItem(KEY+'set2')||'null');
+  if(!sv){var old=JSON.parse(localStorage.getItem(KEY+'set')||'{}');sv={bpm:old.bpm,key:old.key,metro:old.metro}}   // из прежних настроек берём только темп и тональность
+  for(var k0 in st)if(typeof sv[k0]===typeof st[k0])st[k0]=sv[k0];
+}catch(e){}
+function save(){try{localStorage.setItem(KEY+'set2',JSON.stringify(st))}catch(e){}}
 function mod12(v){return((Math.round(v)%12)+12)%12}
 function nn(m){return NOTE[mod12(m)]}
 function oct(m){var r=Math.round(m);return r<48?'большой октавы':r<60?'малой октавы':'первой октавы'}
@@ -481,17 +472,19 @@ function catOf(dev){var ad=Math.abs(dev);return ad<=.5?'hit':ad<=1.5?'near':'mis
 
 /*DETECT-BEGIN*/
 // Высота голоса по одному кадру микрофона (алгоритм YIN): ищем сдвиг, при котором сигнал лучше всего совпадает сам с собой.
+// Берётся самый свежий кусок кадра, прореженный до ~12 кГц: голосу этого хватает, а шума меньше.
 var Y=new Float32Array(4096),CM=new Float32Array(1024);
 function detectPitch(buf,sr){
-  var dec=Math.max(1,Math.round(sr/24000)),n=Math.floor(buf.length/dec),i,j,s=0,v;
-  for(i=0;i<n;i++){v=0;for(j=0;j<dec;j++)v+=buf[i*dec+j];v/=dec;Y[i]=v;s+=v*v}
-  var rms=Math.sqrt(s/n);
-  if(rms<0.004)return{hz:0,clarity:0,rms:rms};
-  var sr2=sr/dec,W=Math.min(1024,n>>1),tmin=Math.floor(sr2/520),tmax=Math.min(Math.ceil(sr2/68),n-W-2,1020),tau,d,q,cum=0,best=-1;
+  var dec=Math.max(1,Math.round(sr/12000)),n=Math.floor(buf.length/dec),i,j,s=0,v;
+  for(i=0;i<n;i++){v=0;for(j=0;j<dec;j++)v+=buf[i*dec+j];v/=dec;Y[i]=v}
+  var sr2=sr/dec,tmin=Math.floor(sr2/520),tmax=Math.min(Math.ceil(sr2/68),1020),W=Math.min(768,n-tmax-2),o=n-W-tmax-2,tau,d,q,cum=0,best=-1;
+  for(i=o;i<n;i++)s+=Y[i]*Y[i];
+  var rms=Math.sqrt(s/(n-o));
+  if(rms<0.0008)return{hz:0,clarity:0,rms:rms};
   CM[0]=1;
-  for(tau=1;tau<=tmax+1;tau++){d=0;for(j=0;j<W;j++){q=Y[j]-Y[j+tau];d+=q*q}cum+=d;CM[tau]=cum>0?d*tau/cum:1}
+  for(tau=1;tau<=tmax+1;tau++){d=0;for(j=o;j<o+W;j++){q=Y[j]-Y[j+tau];d+=q*q}cum+=d;CM[tau]=cum>0?d*tau/cum:1}
   for(tau=tmin;tau<=tmax;tau++){if(CM[tau]<0.15){while(tau+1<=tmax&&CM[tau+1]<CM[tau])tau++;best=tau;break}}
-  if(best<0){                                   // чистого совпадения нет (хрип, шум, эхоподавление): берём лучший из слабых
+  if(best<0){                                   // чистого совпадения нет (хрип, шум, далёкий голос): берём лучший из слабых
     var mn=1e9,gm=-1;for(tau=tmin;tau<=tmax;tau++)if(CM[tau]<mn){mn=CM[tau];gm=tau}
     if(mn>0.5)return{hz:0,clarity:1-mn,rms:rms};
     for(tau=tmin+1;tau<gm;tau++)if(CM[tau]<=mn+0.03&&CM[tau]<=CM[tau-1]&&CM[tau]<=CM[tau+1]){best=tau;break}   // самый короткий период из почти равных — без ошибки на октаву
@@ -504,7 +497,7 @@ function detectPitch(buf,sr){
 /*DETECT-END*/
 
 // ---------------------------------------------------------------- звук
-var ctx=null,run=null,cur=null,hist=[],wake=null;
+var ctx=null,run=null,cur=null,hist=[],wake=null,floorRms=0.002;
 function ensureCtx(){
   if(!ctx){var AC=window.AudioContext||window.webkitAudioContext;if(!AC)return null;ctx=new AC()}
   if(ctx.state==='suspended')ctx.resume();
@@ -520,10 +513,10 @@ function tone(m,t,dur,vol,dest,sus){
   o.connect(g);o2.connect(g2);g2.connect(g);g.connect(lp);lp.connect(dest);
   o.start(t);o2.start(t);o.stop(t+dur+.05);o2.stop(t+dur+.05);
 }
-function click(t,acc,dest){
-  var o=ctx.createOscillator(),g=ctx.createGain();o.type='square';o.frequency.value=acc?1760:1175;
-  g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(acc?.2:.13,t+.002);g.gain.exponentialRampToValueAtTime(.0005,t+.045);
-  o.connect(g);g.connect(dest);o.start(t);o.stop(t+.06);
+function click(t,acc,dest){   // щелчок высокий и короткий: фильтр микрофона (до 1 кГц) его не пропускает, за голос он не сойдёт
+  var o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=acc?3300:2500;
+  g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(acc?.5:.34,t+.002);g.gain.exponentialRampToValueAtTime(.0005,t+.03);
+  o.connect(g);g.connect(dest);o.start(t);o.stop(t+.045);
 }
 function strum(c,t,vol,dur,dest){CH[c].forEach(function(m,j){tone(m+st.key,t+j*.014,dur,vol,dest,false)})}
 function awake(on){   // на телефоне экран не должен гаснуть посреди упражнения
@@ -532,26 +525,38 @@ function awake(on){   // на телефоне экран не должен га
 }
 
 // ---------------------------------------------------------------- микрофон
-var mic={on:false,stream:null,src:null,an:null,buf:null,level:0,err:'',busy:false};
+// Два режима. «Чистый» — без обработки телефоном: слышит тихий и далёкий голос, но и всё, что играет динамик.
+// «С подавлением эха» — когда во время пения звучит нота или аккорд: динамик вычитается, но голос нужен громче и ближе.
+var mic={on:false,stream:null,src:null,an:null,buf:null,level:0,err:'',busy:false,aec:false,inLat:.02};
+function wantAEC(){return st.note||st.chord}
 function micStop(){
   if(mic.stream)mic.stream.getTracks().forEach(function(t){t.stop()});
   if(mic.src){try{mic.src.disconnect()}catch(e){}}
   mic.stream=mic.src=mic.an=null;mic.on=false;mic.level=0;
 }
-function micStart(){
+function micStart(then){
   if(!ensureCtx()){mic.err='Этот браузер не умеет работать со звуком на странице.';refresh();return}
   if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){
     mic.err='Браузер не даёт этой странице микрофон. С компьютера откройте файл в Chrome, Edge или Firefox; на телефоне страница должна открываться по адресу https://.';refresh();return}
+  var aec=wantAEC();
   mic.busy=true;mic.err='';refresh();
-  navigator.mediaDevices.getUserMedia({audio:{echoCancellation:!st.phones,noiseSuppression:false,autoGainControl:true,channelCount:1}}).then(function(s){
+  navigator.mediaDevices.getUserMedia({audio:{echoCancellation:aec,noiseSuppression:false,autoGainControl:aec,channelCount:1}}).then(function(s){
     micStop();
-    mic.stream=s;mic.src=ctx.createMediaStreamSource(s);mic.an=ctx.createAnalyser();mic.an.fftSize=4096;mic.an.smoothingTimeConstant=0;
-    var z=ctx.createGain();z.gain.value=0;mic.src.connect(mic.an);mic.an.connect(z);z.connect(ctx.destination);   // в динамики микрофон не идёт
-    mic.buf=new Float32Array(4096);mic.on=true;mic.busy=false;refresh();
+    mic.stream=s;mic.aec=aec;mic.src=ctx.createMediaStreamSource(s);
+    var tr0=s.getAudioTracks()[0],ts=tr0&&tr0.getSettings?tr0.getSettings():{};
+    mic.inLat=typeof ts.latency==='number'&&ts.latency>0&&ts.latency<.3?ts.latency:.02;
+    function bq(type,f){var q=ctx.createBiquadFilter();q.type=type;q.frequency.value=f;q.Q.value=-3;return q}   // Q=−3 дБ — ровная полоса без горба
+    var hp=bq('highpass',70),l1=bq('lowpass',1000),l2=bq('lowpass',1000),z=ctx.createGain();
+    mic.an=ctx.createAnalyser();mic.an.fftSize=4096;mic.an.smoothingTimeConstant=0;
+    z.gain.value=0;                                                    // в динамики микрофон не идёт
+    mic.src.connect(hp);hp.connect(l1);l1.connect(l2);l2.connect(mic.an);mic.an.connect(z);z.connect(ctx.destination);
+    mic.buf=new Float32Array(4096);mic.on=true;mic.busy=false;hist=[];floorRms=0.002;refresh();
+    if(then)then();
   }).catch(function(e){
     mic.busy=false;mic.on=false;
     mic.err=e&&(e.name==='NotAllowedError'||e.name==='SecurityError')?'Доступ к микрофону не разрешён. Нажмите ещё раз и выберите «Разрешить».':'Микрофон не найден или занят другой программой.';
     refresh();
+    if(then)then();
   });
 }
 function smooth(m){
@@ -562,6 +567,11 @@ function smooth(m){
   var md=v[v.length>>1];
   return m!==null&&Math.abs(m-md)<1.5?m:md;
 }
+// Насколько голос на экране отстаёт от разметки: задержка динамика + задержка микрофона + половина окна анализа.
+function latency(){
+  var o=(ctx.outputLatency||0)+(ctx.baseLatency||0);
+  return Math.max(.07,Math.min(.45,o+mic.inLat+.06));
+}
 
 // ---------------------------------------------------------------- упражнение и запуск
 function buildSeq(ex){
@@ -569,33 +579,39 @@ function buildSeq(ex){
   ex.notes.forEach(function(n){if(n[0]!==null)notes.push({i:notes.length,pos:pos,len:n[1],m:n[0]+st.key,label:n[2]||nn(n[0]+st.key)});pos+=n[1]});
   return{notes:notes,total:pos,bars:ex.bars};
 }
-function scored(r,pass){return pass>=0&&!(r.listen&&pass===0)}
+function scored(r,c){return c>=0&&!(r.listen&&c===0)}
 function start(tr){
   stop();
   if(!ensureCtx())return;
+  if(mic.on&&mic.aec!==wantAEC()){micStart(function(){start(tr)});return}     // режим микрофона под то, что будет звучать
   var sq=buildSeq(EX[tr.exId]),step=60/st.bpm/2,out=ctx.createGain();out.connect(ctx.destination);
   function chan(on){var g=ctx.createGain();g.gain.value=on?1:0;g.connect(out);return g}
-  run={tr:tr,sq:sq,step:step,out:out,gClick:chan(st.metro),gNote:chan(st.note),gChord:chan(st.chord),gFix:chan(true),
-       t0:ctx.currentTime+.15+8*step,k:-8,listen:st.listen,loop:st.loop,samples:[],cats:[],vpass:-1,byPos:{},endAt:null,timer:null};
+  run={tr:tr,sq:sq,step:step,P:sq.total+GAP,out:out,gClick:chan(st.metro),gNote:chan(st.note),gChord:chan(st.chord),gFix:chan(true),
+       t0:ctx.currentTime+.15+8*step,k:-8,listen:st.listen,loop:st.loop,samples:[],cats:[],vc:-1,fin:false,byPos:{},endAt:null,timer:null,lat:latency(),latSet:false};
   sq.notes.forEach(function(n){run.byPos[n.pos]=n});
   run.passes=(run.listen?1:0)+1;
   tr.last=null;tr.page=0;tr.showResults(null);tr.setPlaying(true);awake(true);
   document.body.classList.add('tr-run');
-  if(window.innerWidth<760)tr.el.scrollIntoView({block:'start'});   // на телефоне: кнопка, индикатор и лента — на одном экране
+  if(window.innerWidth<760)tr.el.scrollIntoView({block:'start'});   // на телефоне: кнопка и лента — на одном экране
   sched();run.timer=setInterval(sched,25);
 }
+// Расписание: [такт отсчёта] круг 0 [такт отсчёта] круг 1 … Круг 0 — образец, если он включён.
 function sched(){
   var r=run;if(!r||r.endAt!==null)return;
   while(r.t0+r.k*r.step<ctx.currentTime+.15){
-    var k=r.k,t=r.t0+k*r.step;
+    var k=r.k,t=r.t0+k*r.step,total=r.sq.total;
     if(k<0){if(k%2===0)click(t,k===-8,r.gFix)}
     else{
-      var pass=Math.floor(k/r.sq.total),p=k%r.sq.total;
-      if(!r.loop&&pass>=r.passes){r.endAt=t;clearInterval(r.timer);r.timer=null;return}
-      var lis=r.listen&&pass===0;
-      if(p%2===0)click(t,p%8===0,r.gClick);
-      if(p%4===0){var c=r.sq.bars[Math.floor(p/8)];if(CH[c])strum(c,t,p%8===0?.15:.09,r.step*4.4,r.gChord)}
-      var n=r.byPos[p];if(n)tone(n.m,t,n.len*r.step*.96,.34,lis?r.gFix:r.gNote,true);
+      var c=Math.floor(k/r.P),p=k%r.P;
+      if(p>=total){                                     // отсчёт перед следующим кругом
+        if(!r.loop&&c>=r.passes-1){r.endAt=t;clearInterval(r.timer);r.timer=null;return}
+        if((p-total)%2===0)click(t,p===total,r.gFix);
+      }else{
+        var lis=r.listen&&c===0;
+        if(p%2===0)click(t,p%8===0,r.gClick);
+        if(p%4===0){var ch=r.sq.bars[Math.floor(p/8)];if(CH[ch])strum(ch,t,p%8===0?.15:.09,r.step*4.4,lis?r.gFix:r.gChord)}
+        var n=r.byPos[p];if(n)tone(n.m,t,n.len*r.step*.96,.34,lis?r.gFix:r.gNote,true);
+      }
     }
     r.k++;
   }
@@ -604,14 +620,13 @@ function stop(done){
   var r=run;if(!r)return;run=null;awake(false);document.body.classList.remove('tr-run');
   if(r.timer)clearInterval(r.timer);
   try{r.out.gain.setTargetAtTime(0,ctx.currentTime,.015);setTimeout(function(){try{r.out.disconnect()}catch(e){}},300)}catch(e){}
-  var lastPass=r.samples.length?r.samples[r.samples.length-1].pass:-1;
-  r.tr.last={sq:r.sq,samples:r.samples.filter(function(s){return s.pass===lastPass}),pass:lastPass,cats:(done?r.lastRes:r.cats)||[]};
+  r.tr.last={sq:r.sq,samples:r.samples,cats:r.cats,done:!!done};
   r.tr.page=0;
-  r.tr.setPlaying(false);r.tr.setMeter(done?{mode:'done'}:null);r.tr.redraw();
+  r.tr.setPlaying(false);r.tr.redraw();
 }
-function grade(r,pass,n){    // одна нота: середина её длительности, медиана отклонения
+function grade(r,n){    // одна нота: середина её длительности, медиана отклонения
   var step=r.step,a=n.pos+Math.min(.12,.4*n.len*step)/step,b=n.pos+n.len-.04/step,cnt=0,v=[];
-  for(var i=r.samples.length-1;i>=0;i--){var s=r.samples[i];if(s.pass!==pass)break;if(s.p>=a&&s.p<b){cnt++;if(s.m!==null)v.push(s.m-n.m)}}
+  r.samples.forEach(function(s){if(s.p>=a&&s.p<b){cnt++;if(s.m!==null)v.push(s.m-n.m)}});
   if(cnt<2||v.length<Math.max(2,cnt*.3))return{n:n,cat:'none'};
   v.sort(function(x,y){return x-y});
   var dev=v[v.length>>1];
@@ -624,32 +639,32 @@ function devText(dev){
   return(dev>0?'выше на ':'ниже на ')+ru(ad<3?Math.round(ad*2)/2:Math.round(ad),1);   // до половины полутона — точнее на глаз не нужно
 }
 function noteAt(sq,p){for(var i=0;i<sq.notes.length;i++){var n=sq.notes[i];if(p>=n.pos&&p<n.pos+n.len)return n}return null}
-function nextNote(sq,p){for(var i=0;i<sq.notes.length;i++)if(sq.notes[i].pos>=p)return sq.notes[i];return null}
-function finishPass(r,pass){
-  if(!scored(r,pass)||!mic.on)return;
-  var res=r.sq.notes.map(function(n){return r.cats[n.i]||grade(r,pass,n)});
-  r.lastRes=res;r.tr.showResults(res);
+function finishPass(r){
+  if(!mic.on)return;
+  r.sq.notes.forEach(function(n){if(!r.cats[n.i])r.cats[n.i]=grade(r,n)});
+  var res=r.cats;r.tr.showResults(res);
   var hit=res.filter(function(x){return x.cat==='hit'}).length;
   try{var b=JSON.parse(localStorage.getItem(KEY+'best-'+r.tr.exId)||'null');
     if(!b||hit/res.length>b.hit/b.total){localStorage.setItem(KEY+'best-'+r.tr.exId,JSON.stringify({hit:hit,total:res.length,bpm:st.bpm,key:st.key}));bestTable()}}catch(e){}
 }
 function tick(now,pitch){
-  var r=run,total=r.sq.total,pos=(now-r.t0)/r.step,sp=(now-LAT-r.t0)/r.step,tr=r.tr;
-  var vpass=sp<0?-1:Math.floor(sp/total);
-  if(vpass>r.vpass){if(r.vpass>=0)finishPass(r,r.vpass);r.vpass=vpass;r.cats=[]}
-  if(r.endAt!==null&&now>r.endAt+LAT+.12){stop(true);return}
-  var tail=!r.loop&&vpass>=r.passes;                      // круг кончился, идёт короткий хвост до остановки
-  if(tail)return;
-  var sc=scored(r,vpass),vp=sp<0?0:sp-vpass*total;
-  if(sp>=0&&mic.on&&sc){
-    r.samples.push({pass:vpass,p:vp,m:pitch});
-    r.sq.notes.forEach(function(n){if(!r.cats[n.i]&&vp>=n.pos+n.len)r.cats[n.i]=grade(r,vpass,n)});   // нота допета — сразу красим
+  var r=run,P=r.P,total=r.sq.total,tr=r.tr,pos=(now-r.t0)/r.step;
+  if(!r.latSet&&pos>=-2){r.lat=latency();r.latSet=true}          // к концу отсчёта звук уже идёт — задержка известна точнее
+  var sp=(now-r.lat-r.t0)/r.step,vc=sp<0?-1:Math.floor(sp/P),vo=sp<0?0:sp-vc*P;     // голос: какой круг и где в нём
+  if(vc>r.vc){r.vc=vc;r.fin=false;if(scored(r,vc)){r.samples=[];r.cats=[]}}         // новый круг пения — лента с чистого листа
+  var sc=scored(r,vc)&&vo<total;
+  if(sc&&mic.on){
+    r.samples.push({p:vo,m:pitch});
+    r.sq.notes.forEach(function(n){if(!r.cats[n.i]&&vo>=n.pos+n.len)r.cats[n.i]=grade(r,n)});   // нота допета — сразу красим
   }
-  var pass=pos<0?-1:Math.floor(pos/total),n=sp<0?null:noteAt(r.sq,vp);
-  if(pos<0)tr.setMeter({mode:'count',num:Math.max(1,Math.ceil(-pos/2)),next:r.sq.notes[0],listen:r.listen});
-  else if(!sc)tr.setMeter({mode:'listen',need:n});
-  else tr.setMeter({mode:'sing',need:n,next:n?null:nextNote(r.sq,vp),pitch:pitch});
-  tr.draw({sq:r.sq,samples:r.samples,pass:vpass,pos:pos<0?null:pos-pass*total,pitch:sc?pitch:null,vp:sp<0||!sc?null:vp,cats:sc?r.cats:[]});
+  if(scored(r,vc)&&!r.fin&&vo>=total){r.fin=true;finishPass(r)}
+  if(r.endAt!==null&&now>r.endAt+r.lat+.12){stop(true);return}
+  var ac=pos<0?-1:Math.floor(pos/P),ao=pos<0?0:pos-ac*P,ph,pages=Math.ceil(total/8/perPage(tr.cv,r.sq));
+  if(pos<0)ph={t:'count',num:Math.max(1,Math.ceil(-pos/2)),label:r.listen?'Сейчас образец':'Приготовьтесь'};
+  else if(ao>=total)ph={t:'count',num:Math.max(1,Math.ceil((P-ao)/2)),label:r.listen&&ac===0?'Теперь вы':'Ещё раз'};
+  else ph={t:r.listen&&ac===0?'listen':'sing'};
+  tr.draw({sq:r.sq,samples:r.samples,cats:r.cats,phase:ph,pos:ph.t==='count'?null:ao,page:pos<0?0:pages-1,
+           pitch:sc?pitch:null,vp:sc?vo:null});
 }
 
 // ---------------------------------------------------------------- рисование ленты
@@ -671,20 +686,27 @@ function lanes(g,lo,hi,L,R,W,Yf){
   }
 }
 function perPage(cv,sq){var bars=sq.total/8,want=cv.clientWidth<560?2:4;return bars<=want?bars:want}
+var PH={listen:['Слушайте образец',COL.s1],sing:['Пойте',COL.good],done:['Готово',COL.muted]};
+// Вся подсказка «что сейчас» рисуется внутри ленты: над ней ничего не меняется, и страница не прыгает.
 function drawRoll(cv,o){
-  var f=fit(cv),g=f.g,W=f.W,H=f.H,small=W<560,L=small?40:48,R=6,T=24,B=36,sq=o.sq,rg=range(sq),lo=rg[0],hi=rg[1];
-  var bars=sq.total/8,per=perPage(cv,sq),page=o.pos==null?(o.page||0):Math.min(Math.floor(o.pos/8/per),Math.ceil(bars/per)-1);
-  var x0=page*per*8,x1=x0+per*8;
+  var f=fit(cv),g=f.g,W=f.W,H=f.H,small=W<560,L=small?40:48,R=6,T=50,B=36,sq=o.sq,rg=range(sq),lo=rg[0],hi=rg[1];
+  var bars=sq.total/8,per=perPage(cv,sq),np=Math.ceil(bars/per),page=o.pos==null?Math.min(o.page||0,np-1):Math.min(Math.floor(o.pos/8/per),np-1);
+  var x0=page*per*8,x1=x0+per*8,ph=o.phase;
   function X(p){return L+(p-x0)/(x1-x0)*(W-L-R)}
   function Yf(m){return T+(hi+.5-m)/(hi-lo+1)*(H-T-B)}
   function Yc(m){return Math.max(T+3,Math.min(H-B-3,Yf(m)))}
   lanes(g,lo,hi,L,R,W,Yf);
+  if(ph){                                                  // строка состояния
+    var lab=ph.t==='count'?[ph.label,COL.ink]:PH[ph.t];
+    g.font='650 13px system-ui,-apple-system,"Segoe UI",Roboto,sans-serif';
+    var tw=g.measureText(lab[0]).width+20;g.fillStyle=lab[1];rr(g,L,3,tw,22,11);txt(g,lab[0],L+tw/2,18.5,'center',13,'#fff','650');
+  }
+  if(np>1)txt(g,'такты '+(page*per+1)+'–'+Math.min(bars,(page+1)*per)+' из '+bars,W-R-2,18,'right',11.5,COL.muted);
   for(var b=0;b<=per;b++){
-    var bx=X(x0+b*8);g.strokeStyle=COL.axis;g.lineWidth=1;g.beginPath();g.moveTo(bx,T-14);g.lineTo(bx,H-B);g.stroke();
+    var bx=X(x0+b*8);g.strokeStyle=COL.axis;g.lineWidth=1;g.beginPath();g.moveTo(bx,T-16);g.lineTo(bx,H-B);g.stroke();
     var c=sq.bars[page*per+b];if(b<per&&c)txt(g,chordName(c),bx+5,T-6,'left',12.5,COL.ink2,'650');
     if(b<per)for(var q=1;q<4;q++){var qx=X(x0+b*8+q*2);g.strokeStyle=COL.soft;g.beginPath();g.moveTo(qx,T);g.lineTo(qx,H-B);g.stroke()}
   }
-  if(bars>per)txt(g,(page+1)+' / '+Math.ceil(bars/per),W-R-2,T-6,'right',11.5,COL.muted);
   var row=0;
   sq.notes.forEach(function(n){
     if(n.pos+n.len<=x0||n.pos>=x1)return;
@@ -694,13 +716,17 @@ function drawRoll(cv,o){
     txt(g,n.label,Math.max(xa+1,(xa+Math.min(xb,xa+70))/2),H-B+14+(row++%2)*14,'center',small?11.5:12.5,COL.ink,ct&&ct.cat==='hit'?'650':'400');
   });
   (o.samples||[]).forEach(function(s){
-    if(s.pass!==o.pass||s.m===null||s.p<x0||s.p>=x1)return;
+    if(s.m===null||s.p<x0||s.p>=x1)return;
     var n=noteAt(sq,s.p);
     g.fillStyle=n?CAT[catOf(s.m-n.m)]:CAT.free;
     g.beginPath();g.arc(X(s.p),Yc(s.m),2.8,0,6.283);g.fill();
   });
-  if(o.pos!=null){var px=X(o.pos);g.strokeStyle=COL.s1;g.lineWidth=2;g.beginPath();g.moveTo(px,T-14);g.lineTo(px,H-B);g.stroke()}
+  if(o.pos!=null){var px=X(o.pos);g.strokeStyle=COL.s1;g.lineWidth=2;g.beginPath();g.moveTo(px,T-16);g.lineTo(px,H-B);g.stroke()}
   if(o.vp!=null&&o.pitch!=null&&o.vp>=x0&&o.vp<x1){g.fillStyle=COL.ink;g.beginPath();g.arc(X(o.vp),Yc(o.pitch),6,0,6.283);g.fill();g.strokeStyle='#fff';g.lineWidth=2;g.stroke()}
+  if(ph&&ph.t==='count'){                                  // крупная цифра отсчёта поверх ленты
+    var cy=T+(H-T-B)/2;g.fillStyle='rgba(252,252,251,.72)';g.beginPath();g.arc((L+W-R)/2,cy,small?46:58,0,6.283);g.fill();
+    txt(g,String(ph.num),(L+W-R)/2,cy+(small?24:30),'center',small?68:86,'rgba(11,11,11,.78)','700');
+  }
 }
 var tun={trace:[]};
 function drawTuner(cv,now){
@@ -722,79 +748,45 @@ function keyText(){
   return name+' — ниже на '+(-k)+'; аккорды на экране уже пересчитаны';
 }
 function sw(s,t){return'<label class="tr-sw"><input type="checkbox" data-s="'+s+'"><span>'+t+'</span></label>'}
-function meterHTML(){
-  return'<div class="tr-meter"><div class="tr-light"><span></span></div>'+
-    '<div class="tr-mtxt"><div class="tr-big"></div><div class="tr-msg"></div></div>'+
-    '<div class="tr-scale"><em>ниже</em><div class="tr-track"><span class="z2"></span><span class="z1"></span><i></i></div><em>выше</em></div></div>';
-}
 function blockHTML(vars){
   return vars+
     '<div class="tr-row tr-main"><button class="tr-go" type="button">&#9654; Старт</button><button class="tr-micbtn" type="button"></button><span class="tr-lvl"><i></i></span></div>'+
-    '<div class="tr-micmsg"></div>'+meterHTML()+'<canvas class="tr-cv"></canvas>'+
+    '<div class="tr-micmsg"></div><canvas class="tr-cv"></canvas>'+
     '<div class="tr-pgs"><button type="button" data-pg="-1" aria-label="предыдущие такты">&#8249;</button><span></span><button type="button" data-pg="1" aria-label="следующие такты">&#8250;</button></div>'+
     '<div class="tr-res"></div>'+
     '<div class="tr-set">'+
       '<div class="tr-grp"><span class="tr-l">Темп</span><button type="button" data-bpm="-5" aria-label="медленнее">&minus;</button><b class="tr-bpm"></b><button type="button" data-bpm="5" aria-label="быстрее">+</button></div>'+
       '<div class="tr-grp"><span class="tr-l">Тональность</span><button type="button" data-key="-1" aria-label="ниже">&minus;</button><b class="tr-keyv"></b><button type="button" data-key="1" aria-label="выше">+</button></div>'+
       '<div class="tr-keyhint"></div>'+
-      '<div class="tr-sws"><span class="tr-l">Звучит</span>'+sw('metro','метроном')+sw('note','нота')+sw('chord','аккорд')+'</div>'+
-      '<div class="tr-sws"><span class="tr-l">Режим</span>'+sw('listen','сначала послушать')+sw('loop','по кругу')+sw('phones','я в наушниках')+'</div>'+
+      '<div class="tr-sws"><span class="tr-l">Пока поёте, звучит</span>'+sw('metro','метроном')+sw('note','нота')+sw('chord','аккорд')+'</div>'+
+      '<div class="tr-sws"><span class="tr-l">Порядок</span>'+sw('listen','сначала образец')+sw('loop','по кругу')+'</div>'+
+      '<div class="tr-modehint"></div>'+
     '</div>';
 }
 function Trainer(el){
   var self=this,ids=el.getAttribute('data-ex').split(',');
-  this.el=el;this.exId=ids[0];this.last=null;
+  this.el=el;this.exId=ids[0];this.last=null;this.page=0;
   var vars=ids.length>1?'<div class="tr-row tr-var">'+ids.map(function(id,i){return'<button type="button" class="chip" data-ex-id="'+id+'" aria-pressed="'+(i?'false':'true')+'">'+EX[id].short+'</button>'}).join('')+'</div>':'';
   el.innerHTML=blockHTML(vars);
   this.cv=el.querySelector('.tr-cv');
-  this.m={box:el.querySelector('.tr-meter'),light:el.querySelector('.tr-light'),sym:el.querySelector('.tr-light span'),big:el.querySelector('.tr-big'),
-          msg:el.querySelector('.tr-msg'),ball:el.querySelector('.tr-track i')};
   el.addEventListener('click',function(ev){
     var b=ev.target.closest('button');if(!b)return;
     if(b.hasAttribute('data-ex-id')){if(run&&run.tr===self)stop();self.exId=b.getAttribute('data-ex-id');self.last=null;self.showResults(null);
-      all('[data-ex-id]',el).forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});self.setMeter(null);self.redraw()}
+      all('[data-ex-id]',el).forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});self.redraw()}
     else if(b.classList.contains('tr-go')){if(run&&run.tr===self)stop();else start(self)}
     else if(b.hasAttribute('data-pg')&&!(run&&run.tr===self)){self.page=(self.page||0)+(+b.getAttribute('data-pg'));self.redraw()}
   });
-  this.page=0;this.setMeter(null);
 }
 Trainer.prototype.setPlaying=function(on){var b=this.el.querySelector('.tr-go');b.innerHTML=on?'&#9632; Стоп':'&#9654; Старт';b.classList.toggle('on',on)};
 Trainer.prototype.redraw=function(){
   var sq=this.last?this.last.sq:buildSeq(EX[this.exId]),rg=range(sq),small=this.cv.clientWidth<560;
-  this.cv.style.height=Math.max(small?210:240,Math.min(small?340:430,(rg[1]-rg[0]+1)*(small?11:13)+60))+'px';
-  var pages=Math.ceil(sq.total/8/perPage(this.cv,sq)),pg=this.el.querySelector('.tr-pgs');
+  this.cv.style.height=Math.max(small?236:266,Math.min(small?366:456,(rg[1]-rg[0]+1)*(small?11:13)+86))+'px';
+  var per=perPage(this.cv,sq),pages=Math.ceil(sq.total/8/per),pg=this.el.querySelector('.tr-pgs');
   this.page=Math.max(0,Math.min(pages-1,this.page||0));
-  pg.style.display=pages>1?'flex':'none';pg.querySelector('span').textContent='такты '+(this.page*perPage(this.cv,sq)+1)+'–'+Math.min(sq.total/8,(this.page+1)*perPage(this.cv,sq))+' из '+sq.total/8;
-  drawRoll(this.cv,{sq:sq,samples:this.last?this.last.samples:[],pass:this.last?this.last.pass:-1,pos:null,cats:this.last?this.last.cats:[],page:this.page});
+  pg.style.display=pages>1?'flex':'none';pg.querySelector('span').textContent='листать такты';
+  drawRoll(this.cv,{sq:sq,samples:this.last?this.last.samples:[],cats:this.last?this.last.cats:[],pos:null,page:this.page,phase:this.last&&this.last.done?{t:'done'}:null});
 };
 Trainer.prototype.draw=function(o){drawRoll(this.cv,o)};
-// Крупный индикатор: кружок со стрелкой (куда двигать голос), подпись и шкала с шариком.
-Trainer.prototype.setMeter=function(o){
-  var m=this.m,cls='idle',sym='♪',big='',msg='',ball=null;
-  if(!o){big='Нажмите «Старт»';msg=mic.on?'Микрофон слушает. На экране появятся нужная нота и ваш голос.':'Сначала включите микрофон — иначе тренажёр не увидит ваш голос.'}
-  else if(o.mode==='done'){cls='idle';sym='✓';big='Готово';msg=mic.on?'Результат по каждой ноте — под лентой.':'Микрофон был выключен, поэтому оценки нет.'}
-  else if(o.mode==='count'){cls='count';sym=String(o.num);big=o.listen?'Сейчас образец':'Приготовьтесь';msg=o.next?'первая нота — «'+nn(o.next.m)+'»':''}
-  else if(o.mode==='listen'){cls='listen';sym='♪';big='Слушайте'+(o.need?': «'+nn(o.need.m)+'»':'');msg='потом то же самое споёте вы'}
-  else{
-    var n=o.need;
-    if(!n){cls='idle';sym='…';big=o.next?'Дальше — «'+nn(o.next.m)+'»':'Пауза';msg=''}
-    else if(!mic.on){cls='idle';sym='?';big='Нужно «'+nn(n.m)+'»';msg='включите микрофон, чтобы видеть свой голос'}
-    else if(o.pitch===null){cls='idle';sym='?';big='Нужно «'+nn(n.m)+'»';msg='не слышу голос — пойте громче или ближе к микрофону'}
-    else{
-      var dev=o.pitch-n.m,cat=catOf(dev);cls=cat;ball=dev;
-      big='Нужно «'+nn(n.m)+'» · вы «'+nn(o.pitch)+'»';
-      if(cat==='hit'){sym='✓';msg='в ноту — держите'}
-      else if(dev>0){sym='↓';msg='опускайтесь: вы '+devText(dev)}
-      else{sym='↑';msg='поднимайтесь: вы '+devText(dev)}
-    }
-  }
-  if(m.box.className!=='tr-meter '+cls)m.box.className='tr-meter '+cls;
-  if(m.sym.textContent!==sym)m.sym.textContent=sym;
-  if(m.big.textContent!==big)m.big.textContent=big;
-  if(m.msg.textContent!==msg)m.msg.textContent=msg;
-  if(ball===null)m.ball.style.display='none';
-  else{m.ball.style.display='block';m.ball.style.left=(50+Math.max(-1,Math.min(1,ball/4))*50)+'%'}
-};
 Trainer.prototype.showResults=function(res){
   var box=this.el.querySelector('.tr-res');
   if(!res){box.innerHTML='';return}
@@ -813,9 +805,10 @@ function refresh(){
   all('.tr-keyhint').forEach(function(e){e.textContent=keyText()});
   all('input[data-s]').forEach(function(e){e.checked=!!st[e.getAttribute('data-s')]});
   all('.tr-micbtn').forEach(function(e){e.textContent=mic.busy?'Жду разрешения…':mic.on?'Микрофон включён':'Включить микрофон';e.classList.toggle('on',mic.on)});
-  all('.tr-micmsg').forEach(function(e){
-    e.textContent=mic.err||(mic.on&&!st.phones?'Без наушников микрофон слышит и подсказку из динамика. Точнее — в наушниках.':'');e.classList.toggle('err',!!mic.err)});
-  trainers.forEach(function(t){if(!run||run.tr!==t)t.setMeter(t.last&&t.last.pass>=0?{mode:'done'}:null)});
+  all('.tr-micmsg').forEach(function(e){e.textContent=mic.err||(mic.on||mic.busy?'':'Без микрофона тренажёр не увидит ваш голос.');e.classList.toggle('err',!!mic.err)});
+  all('.tr-modehint').forEach(function(e){e.textContent=wantAEC()
+    ?'Нота или аккорд из динамика попадают в микрофон, поэтому он включает подавление эха и слышит хуже: пойте ближе и громче. Чутче всего — когда звучит только метроном.'
+    :'Пока вы поёте, звучит только метроном — так микрофон слышит даже негромкий голос на расстоянии. Нота и аккорд звучат в образце.'});
 }
 function bestTable(){
   var tb=document.getElementById('tr-best');if(!tb)return;
@@ -840,7 +833,7 @@ document.addEventListener('change',function(ev){
     if(s==='note')run.gNote.gain.setTargetAtTime(st.note?1:0,t,.01);
     if(s==='chord')run.gChord.gain.setTargetAtTime(st.chord?1:0,t,.01);
     if(s==='loop')run.loop=st.loop}
-  if(s==='phones'&&mic.on)micStart();
+  if((s==='note'||s==='chord')&&mic.on&&mic.aec!==wantAEC())micStart();     // сменился набор звуков — сменился режим микрофона
 });
 function frame(){
   requestAnimationFrame(frame);
@@ -848,10 +841,11 @@ function frame(){
   if(mic.on&&mic.an){
     mic.an.getFloatTimeDomainData(mic.buf);
     var d=detectPitch(mic.buf,ctx.sampleRate);mic.level=d.rms;mic.raw=d;
-    pitch=smooth(d.hz>0&&d.clarity>=.5?69+12*Math.log(d.hz/440)/Math.LN2:null);
+    floorRms=Math.min(d.rms,floorRms*1.0015+1e-6);                       // тишина комнаты: медленно растёт, мгновенно падает
+    pitch=smooth(d.hz>0&&d.clarity>=.5&&d.rms>Math.max(.0012,floorRms*2)?69+12*Math.log(d.hz/440)/Math.LN2:null);
   }
   cur=pitch;
-  var lv=(mic.on?Math.min(100,Math.round(mic.level*500)):0)+'%';
+  var lv=(mic.on?Math.min(100,Math.round(Math.sqrt(mic.level)*260)):0)+'%';
   lvlNodes.forEach(function(e){if(e.style.width!==lv)e.style.width=lv});
   if(tuner){
     if(mic.on)tun.trace.push({t:now,m:pitch});
@@ -869,7 +863,7 @@ function frame(){
 function init(){
   var tu=document.querySelector('.tuner');
   if(tu){
-    tu.innerHTML='<div class="tr-row tr-main"><button class="tr-micbtn" type="button"></button><span class="tr-lvl"><i></i></span>'+sw('phones','я в наушниках')+'</div><div class="tr-micmsg"></div>'+
+    tu.innerHTML='<div class="tr-row tr-main"><button class="tr-micbtn" type="button"></button><span class="tr-lvl"><i></i></span></div><div class="tr-micmsg"></div>'+
       '<div class="tu-read"><div class="tr-light idle"><span class="tu-note">—</span></div><div class="tu-cents"></div></div><canvas></canvas>';
     tuner={cv:tu.querySelector('canvas'),note:tu.querySelector('.tu-note'),cents:tu.querySelector('.tu-cents'),light:tu.querySelector('.tr-light')};
   }
@@ -887,7 +881,8 @@ function init(){
     if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(function(){});
   }
 }
-window.TR_debug={state:function(){return{mic:mic.on,err:mic.err,pitch:cur,level:mic.level,raw:mic.raw||null,running:!!run,secure:window.isSecureContext,sr:ctx?ctx.sampleRate:0}},
+window.TR_debug={state:function(){return{mic:mic.on,aec:mic.aec,err:mic.err,pitch:cur,level:mic.level,raw:mic.raw||null,running:!!run,lat:run?run.lat:null,
+    cycle:run?run.vc:null,secure:window.isSecureContext,sr:ctx?ctx.sampleRate:0}},
   wave:function(){return mic.buf?Array.prototype.slice.call(mic.buf,0,4096):[]}};
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
